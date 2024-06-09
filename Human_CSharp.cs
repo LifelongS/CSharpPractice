@@ -1,22 +1,15 @@
 using System;
-
 namespace HumanExample
 {
     class Human
     {
-        // Свойства человека
+        // Данные человека
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
         public string Profession { get; set; }
 
-        // Конструктор по умолчанию, который задает значения по умолчанию
-        public Human()
-        {
-            Profession = "Не указана";
-        }
-
-        // Метод для ввода данных с консоли
+        // Ввод данных с консоли
         public void InputData()
         {
             Console.WriteLine("Введите имя:");
@@ -29,14 +22,13 @@ namespace HumanExample
             Age = Convert.ToInt32(Console.ReadLine());
         }
 
-        // Метод для вывода данных
+        // Вывод данных
         public void DisplayData()
         {
             Console.WriteLine("Информация о человеке:");
             Console.WriteLine($"Имя: {FirstName}");
             Console.WriteLine($"Фамилия: {LastName}");
             Console.WriteLine($"Возраст: {Age}");
-            Console.WriteLine($"Профессия: {Profession}");
         }
     }
 
